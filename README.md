@@ -4,7 +4,7 @@ This is a quiz based on the fundamentals of JavaScript, HTML, and CSS. Score is 
 
 ## Image
 
-![screenshot]()
+![screenshot]("assets\screenshot.png")
 
 ### Specifications
 
