@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets\style.css" />
+    <title>Quiz Game</title>
+</head>
+
+
+<!--Start Button and Game info -->
+
+<body>
+    <div class="container">
+        <div class="title">
+            <span>Quiz Rules</span>
+        </div>
+        <div class="list">
+            <div class="info"> This quiz is only <span>30 seconds</span> long</div>
+            <div class="info"> Your score will be based on the time remaining once completed</div>
+            <div class="info"> For every incorrect answer time will be subtracted from the score</div>
+        </div>
+        <div class="buttonCon">
+            <div class="start-Btn"><button>Start</button></div>
+        </div>
+    </div>
+
+
+    <!-- Quiz Box -->
+    <div class="quizBox">
+        <header>
+            <div class="title">Code Quiz</div>
+            <div class="timer">
+                <div class="timerText">Time/Score:</div>
+                <div class="timerSeconds">30</div>
+            </div>
+        </header>
+
+
+        <!-- Question and Answer Box -->
+        <section class="section">
+            <div class="questionText">
+                <!-- <span>What does CSS stand for?</span> -->
+            </div>
+            <div class="optionList">
+                <div class="option">
+                    <span>Cheers Stylish Sailor</span>
+                </div>
+                <div class="option">
+                    <span>Cascading Style Sheets</span>
+                </div>
+                <div class="option">
+                    <span>Cascading Steering Style</span>
+                </div>
+                <div class="option">
+                    <span>Check Script Style</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer contains next button and tracking of questions -->
+        <footer>
+            <div class="totalQuestions">
+                <span>
+                    <p>1</p>of<p>5</p>Questions
+                </span>
+            </div>
+        </footer>
+    </div>
+
+    <!--Results page -->
+    <div class="results">
+        <a href="">High Scores</a>
+    </div>
+
+    <script type="text/javascript" src="assets\script.js"></script>
+
+</html>
