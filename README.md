@@ -3,8 +3,7 @@
 This is a quiz based on the fundamentals of JavaScript, HTML, and CSS. Score is determined by how quickly the questions are answered. Wrong answers are penalized by time off the clock. 
 
 ## Image
-
-![screenshot]("assets\screenshot.png")
+![screenshot]("\assets\screenshot.png")
 
 ### Specifications
 

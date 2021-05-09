@@ -41,14 +41,15 @@ var startQuiz = document.querySelector(".start-Btn");
 var quizBox = document.querySelector(".quizBox");
 var optionList = document.querySelector(".optionList");
 var timeCount = quizBox.querySelector(".timer .timerSeconds");
+var resultBox = document.querySelector(".results a")
 
 
-let timeClock = 30;
+let timeClock = 20;
 let que_count = 0;
 let que_numb = 1;
 let counter;
-let timeValue = 30;
-
+let timeValue = 20;
+let score = 0;
 
 
 //If start quiz button clicked ---> clear container ---> start quiz ---> start questioncounter ---> start timer
@@ -57,8 +58,23 @@ startQuiz.addEventListener("click", function () {
     showQuestions(0);
     questionCounter(1)
     questionCounter(que_numb)
-    startTimer(30);
+    startTimer(20);
 })
+
+
+//timer start//
+function startTimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer() {
+        timeCount.textContent = time;
+        time--;
+        //stop timer at end//
+        if (time < 0) {
+            clearInterval(counter);
+            timeCount.textContent = "00";
+        }
+    }
+}
 
 
 //get questions and options from array//
@@ -86,8 +102,12 @@ function optionSelected(answer) {
     let userAnswer = answer.textContent;
     let correctAnswer = questions[que_count].answer;
     if (userAnswer == correctAnswer) {
-
     } else {
+
+
+        //Remove 3 seconds from time for every WRONG!//
+        console.log('WRONG!')
+
 
     }
 };
@@ -102,8 +122,6 @@ nextQuestion.addEventListener("click", function () {
         que_numb++;
         showQuestions(que_count);
         questionCounter(que_numb);
-    } else {
-        console.log("Questions Completed")
     }
 });
 
@@ -115,11 +133,14 @@ function questionCounter(index) {
     questionCount.innerHTML = totalQuestionsSpan;
 }
 
-//timer start//
-function startTimer(time) {
-    counter = setInterval(timer, 1000);
-    function timer() {
-        timeCount.textContent = time;
-        time--;
+
+//open results page once completed//
+function showResultPage() {
+    if (console.log('test completed')) {
+
+        //log "time/score" to High Scores page//
+
+        //Automatically open High Scores HTML//
+
     }
 }
